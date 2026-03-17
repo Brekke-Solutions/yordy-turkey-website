@@ -1,0 +1,36 @@
+.card {
+  background: #fff;
+  border: 1px solid #e0c89a;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.name {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #3b1f0a;
+}
+
+.price {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #b35c00;
+}
+
+.detail {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b5a47;
+}

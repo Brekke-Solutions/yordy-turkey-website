@@ -1,0 +1,13 @@
+.page {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  text-align: center;
+  color: #3b1f0a;
+}
+
+.page a {
+  color: #b35c00;
+  font-weight: 600;
+}
