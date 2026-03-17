@@ -1,0 +1,44 @@
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+*.local
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Editor files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Dependency directories (if any tooling is added later)
+node_modules/
+
+# Build output (if any)
+dist/
+_site/
