@@ -1,0 +1,115 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  color: #3b1f0a;
+}
+
+/* Hero / intro */
+.hero {
+  background: linear-gradient(135deg, #7c3a00 0%, #b35c00 100%);
+  color: #fff;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.heroTitle {
+  margin: 0 0 1rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+
+.heroCopy {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.phone {
+  color: #ffd580;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.phone:hover {
+  text-decoration: underline;
+}
+
+/* Category sections */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.category {
+  /* intentionally empty; children handle layout */
+}
+
+.categoryTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #7c3a00;
+  margin: 0 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #e0c89a;
+}
+
+/* Product grid — responsive */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* CTA section */
+.ctaWrapper {
+  text-align: center;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ctaText {
+  font-size: 1.1rem;
+  color: #5a3a1a;
+  margin: 0;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: #b35c00;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ctaButton:hover {
+  background: #7c3a00;
+  transform: translateY(-1px);
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 1.6rem;
+  }
+
+  .hero {
+    padding: 2rem 1.25rem;
+  }
+}
