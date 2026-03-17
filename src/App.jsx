@@ -1,17 +1,18 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import TurkeyProducts from './pages/TurkeyProducts'
-import OrderForm from './pages/OrderForm'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
+import TurkeyProducts from './pages/TurkeyProducts.jsx'
+import OrderForm from './pages/OrderForm.jsx'
+import HoursContact from './pages/HoursContact.jsx'
 
-function App() {
+export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Navigate to="/products" replace />} />
-        <Route path="/products" element={<TurkeyProducts />} />
-        <Route path="/order-form" element={<OrderForm />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/turkey-products" element={<TurkeyProducts />} />
+      <Route path="/order-form" element={<OrderForm />} />
+      <Route path="/hours-contact" element={<HoursContact />} />
+    </Routes>
   )
 }
-
-export default App

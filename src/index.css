@@ -1,28 +1,32 @@
-:root {
-  font: 16px/1.5 system-ui, 'Segoe UI', Roboto, sans-serif;
-  color: #3b1f0a;
-  background: #faf7f2;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-gray-800 bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@layer components {
+  .btn-primary {
+    @apply inline-block bg-brand-orange hover:bg-amber-600 text-white font-semibold
+           px-6 py-3 rounded-lg transition-colors duration-200 focus:outline-none
+           focus:ring-2 focus:ring-offset-2 focus:ring-brand-orange;
+  }
 
-body {
-  margin: 0;
-  background: #faf7f2;
-}
-
-#root {
-  min-height: 100svh;
-}
-
-h1,
-h2,
-h3 {
-  margin: 0;
+  .btn-secondary {
+    @apply inline-block bg-white hover:bg-brand-cream text-brand-brown font-semibold
+           border-2 border-brand-brown px-6 py-3 rounded-lg transition-colors
+           duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2
+           focus:ring-brand-brown;
+  }
 }

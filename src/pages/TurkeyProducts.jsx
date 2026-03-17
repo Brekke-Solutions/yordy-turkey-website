@@ -1,65 +1,24 @@
-import { Link } from 'react-router-dom';
-import { products } from '../data/products';
-import ProductCard from '../components/ProductCard';
-import styles from './TurkeyProducts.module.css';
+import Navbar from '../components/Navbar.jsx'
+import Footer from '../components/Footer.jsx'
 
-function CategorySection({ label, items }) {
+export default function TurkeyProducts() {
   return (
-    <section className={styles.category}>
-      <h2 className={styles.categoryTitle}>{label}</h2>
-      <div className={styles.grid}>
-        {items.map((item) => (
-          <ProductCard
-            key={item.id}
-            name={item.name}
-            price={item.price}
-            size={item.size}
-            description={item.description}
-          />
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function TurkeyProducts() {
-  return (
-    <div className={styles.page}>
-      <header className={styles.hero}>
-        <h1 className={styles.heroTitle}>Our Turkey Products</h1>
-        <p className={styles.heroCopy}>
-          All of our turkeys are all-hen flocks raised right here on the farm.
-          Plan on approximately <strong>1&nbsp;lb per person</strong> when
-          ordering. Walk-ins are always welcome — pre-orders are encouraged to
-          guarantee your bird. Payment is due upon pickup.
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main id="main-content" className="flex-1 max-w-4xl mx-auto px-4 py-16">
+        <h1 className="font-serif text-4xl font-bold text-brand-brown mb-6">Turkey Products</h1>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          We raise whole turkeys in a variety of sizes to fit any Thanksgiving gathering.
+          All birds are fresh—never frozen—and available for pickup at our Morton, IL farm.
         </p>
-        <p className={styles.heroCopy}>
-          Need a large quantity order or interested in gift certificates?{' '}
-          <a href="tel:3092632891" className={styles.phone}>
-            Call us at 309-263-2891
-          </a>
-          .
-        </p>
-      </header>
-
-      <main className={styles.main}>
-        {Object.values(products).map((category) => (
-          <CategorySection
-            key={category.label}
-            label={category.label}
-            items={category.items}
-          />
-        ))}
+        <ul className="space-y-3 text-gray-700 list-disc list-inside">
+          <li>Small (8–12 lbs) – great for smaller gatherings</li>
+          <li>Medium (12–18 lbs) – our most popular size</li>
+          <li>Large (18–24 lbs) – perfect for big family dinners</li>
+          <li>Extra Large (24+ lbs) – for the biggest tables</li>
+        </ul>
       </main>
-
-      <div className={styles.ctaWrapper}>
-        <p className={styles.ctaText}>Ready to place your order?</p>
-        <Link to="/order-form" className={styles.ctaButton}>
-          Place an Order
-        </Link>
-      </div>
+      <Footer />
     </div>
-  );
+  )
 }
-
-export default TurkeyProducts;
